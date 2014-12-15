@@ -1,0 +1,19 @@
+@mixin desaturate($amount: 100%) {
+  -webkit-transform: translateZ(0);
+  -webkit-filter: grayscale($amount);
+  -moz-filter: grayscale($amount);
+  -ms-filter: grayscale($amount);
+  -o-filter: grayscale($amount);
+  filter: grayscale($amount);
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
