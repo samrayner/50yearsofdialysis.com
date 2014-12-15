@@ -28,8 +28,8 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.8em;
-  font-size: $font-size-base * 1.4;
+  margin: 0 0 0.4em;
+  font-size: $font-size-base * 3;
 }
 
 p {
@@ -41,6 +41,10 @@ p {
 
 iframe {
   margin-bottom: 1em;
+}
+
+.row {
+  padding: 2em 0;
 }
 
 /* Buttons
@@ -58,12 +62,12 @@ iframe {
     border-color: $btn-default-border;
 
     &:hover, &:focus {
-      background-color: $green;
+      background-color: $gold;
       color: $white;
     }
 
     &:active {
-      background-color: darken($green, 10%);
+      background-color: darken($gold, 10%);
       color: $white;
     }
   }
@@ -74,12 +78,12 @@ iframe {
 
     &:hover, &:focus {
       background-color: $white;
-      color: $dark-green;
+      color: $dark-gold;
     }
 
     &:active {
       background-color: transparentize($white, 0.2);
-      color: $dark-green;
+      color: $dark-gold;
     }
   }
 }
@@ -133,16 +137,26 @@ header {
   }
 }
 
+/* Intro
+================================================== */
+
+.intro {
+  font-family: "times new roman", serif;
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+/* Party
+================================================== */
+
+#party {
+  background-color: $pale-blue;
+  text-align: center;
+}
+
 /* Staff
 ================================================== */
 
 #staff .gallery img {
   @include responsive(width, 10%, 10%, 20%, 25%);
-}
-
-/* Footer
-================================================== */
-
-#footer {
-  display: none;
 }

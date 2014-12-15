@@ -1,8 +1,9 @@
 //Custom
 $white: #fffffb;
-$green: #366;
-$dark-green: darken($green, 15%);
-$pale-green: #f0f6f3;
+$gold: #AB8800;
+$dark-gold: darken($gold, 15%);
+$blue: #65A4B0;
+$pale-blue: #F4F8F9;
 
 //Bootstrap
 $container-lg: 970px;
@@ -12,12 +13,12 @@ $headings-font-family: "Cookie", "Apple Chancery", "Lucida Handwriting", cursive
 $font-size-base: 18px;
 $line-height-base: 1.2;
 $headings-line-height: 1;
-$headings-color: fade-out($dark-green, 0.4);
+$headings-color: $blue;
 
 $border-radius-base: 3px;
 $border-radius-small: 2px;
 $body-bg: $white;
-$brand-primary: $green;
+$brand-primary: $gold;
 
 $btn-default-color: $brand-primary;
 $btn-default-border: $btn-default-color;
@@ -25,5 +26,5 @@ $btn-default-bg: rgba(0,0,0,0);
 
 $tooltip-max-width: 300px;
 
-$input-border-focus: $green;
+$input-border-focus: $gold;
 $input-border-radius: $border-radius-small;
