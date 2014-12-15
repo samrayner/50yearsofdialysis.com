@@ -3,11 +3,10 @@ slug: home
 ---
 
 %header
+  = image_tag("crest.png", alt: "Heartlands Crest", class: "crest")
   %h1 50 Years of Dialysis
 
 
-%section#faces
-  .container
-
-    %h1 Faces from the Past
-    %p Hello
+%section#staff
+  %h1.sr-only Faces from the Past
+  = gallery("staff")

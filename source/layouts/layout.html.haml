@@ -1,8 +1,7 @@
 !!! 5
 %html{ lang: "en-gb" }
   = partial "shared/head"
-  %body{ id: current_page.data.slug || "blog" }
-    = partial "shared/navbar"
+  %body{ id: current_page.data.slug }
     #main-content
       = yield
     = partial "shared/footer"

@@ -3,19 +3,13 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@import url(http://fonts.googleapis.com/css?family=Cookie);
+
 /* Global
 ================================================== */
 
 body {
   @include font-smoothing;
-}
-
-#main-content {
-  min-height: 85vh;
-}
-
-section {
-  padding: 2em 0;
 }
 
 abbr, p span[data-toggle=tooltip] {
@@ -96,4 +90,59 @@ iframe {
 .tooltip-inner {
   padding: 0.7em;
   line-height: 1.1;
+}
+
+/* Header
+================================================== */
+
+header {
+  position: relative;
+  background: #ccc url(../images/photos/truck.jpg) no-repeat 50% 35%;
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+
+  &::after {
+    display: block;
+    content: " ";
+    background-color: black;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    line-height: 1;
+    margin: 10px  0;
+    color: white;
+    text-shadow: 0 1px 1px black;
+    @include responsive(font-size, 4em, 3.5em, 2.5em, 2em);
+  }
+
+  .crest {
+    display: inline-block;
+    @include responsive(width, 10%, 15%, 20%, 25%);
+  }
+}
+
+/* Staff
+================================================== */
+
+#staff .gallery img {
+  @include responsive(width, 10%, 10%, 20%, 25%);
+}
+
+/* Footer
+================================================== */
+
+#footer {
+  display: none;
 }

@@ -17,3 +17,16 @@
     -moz-osx-font-smoothing: auto;
   }
 }
+
+@mixin responsive($property, $lg, $md: nil, $sm: nil, $xs: nil) {
+  #{$property}: $lg;
+  @if $md != nil {
+    @media (max-width: $screen-md-max) { #{$property}: $md; }
+  }
+  @if $sm != nil {
+    @media (max-width: $screen-sm-max) { #{$property}: $sm; }
+  }
+  @if $xs != nil {
+    @media (max-width: $screen-xs-max) { #{$property}: $xs; }
+  }
+}
