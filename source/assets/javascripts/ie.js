@@ -1,7 +1,7 @@
 var $buoop = {
   i: 6,
   reminder: 0,
-  text: '<strong>Looks like you\'re in Internet Explorer so things might look a little broken.</strong> If only the NHS would upgrade! This site will work better in <a href="http://www.google.com/chrome/">Google Chrome</a> if you have that installed :)'
+  text: '<strong>Looks like you\'re using Internet Explorer.</strong> If only the NHS would upgrade! This site will work better in <a href="http://www.google.com/chrome/">Google Chrome</a> if you have that installed :)'
 };
 function $buo_f(){
  var e = document.createElement("script");

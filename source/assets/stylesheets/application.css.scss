@@ -3,6 +3,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@import "vendor/jquery.fancybox";
+
 @import url(http://fonts.googleapis.com/css?family=Cookie);
 
 /* Global
@@ -47,13 +49,29 @@ iframe {
   padding: 2em 0;
 }
 
+form #gotcha {
+  position: absolute;
+  top: -9999px;
+}
+
+.row {
+  &.gutters-sm {
+    @include gutter-padding($grid-gutter-width*0.25, $grid-gutter-width*0.25);
+  }
+
+  &.gutters-xs {
+    @include gutter-padding($grid-gutter-width*0.4, $grid-gutter-width*0.1);
+  }
+
+  &.gutters-none {
+    @include gutter-padding($grid-gutter-width*0.5, 0);
+  }
+}
+
 /* Buttons
 -------------------------------------------------- */
 
 .btn {
-  font-size: 1em;
-  padding-top: 0.5em;
-
   &:active {
     box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
   }
@@ -159,4 +177,24 @@ header {
 
 #staff .gallery img {
   @include responsive(width, 10%, 10%, 20%, 25%);
+}
+
+/* Cuttings
+================================================== */
+
+#cuttings .gallery {
+  margin: 0 -5px;
+
+  a {
+    display: block;
+    width: 20%;
+    border: 5px solid transparent;
+    height: 120px;
+    float: left;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
 }

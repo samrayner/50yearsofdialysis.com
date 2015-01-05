@@ -36,10 +36,35 @@ slug: home
 
           It will be a spectacular event that people will talk about for the next 50 years!
 
-          _Tickets will go on sale during 2015._
+          _Tickets will go on sale during 2015. Enter your email address to be notified when they do!_
 
+      .col-sm-offset-3.col-sm-6
+        = form_tag "//formspree.io/#{data.site.email}", method: :post do
+          .row.gutters-xs
+            = hidden_field_tag "_next", value: "http://www.50yearsofdialysis.com/#thanks"
+            = hidden_field_tag "_subject", value: "50th Anniversary Sign-up"
+            .form-group.col-xs-8
+              = label_tag :email, class: "sr-only"
+              = email_field_tag :email, required: true, name: "_replyto", class: "form-control", id: :email, placeholder: "Your email address"
+            .form-group#gotcha
+              = label_tag :ignore, caption: "Please leave blank"
+              = text_field_tag :_gotcha, id: :ignore
+            .col-xs-4
+              = submit_tag "Notify me", class: "btn btn-default btn-block"
+
+      .col-sm-12
+        :kramdown
           If you would like to join the planning team, please [contact Dr Hugh Rayner](mailto:#{data.site.email}).
 
 %section#staff
   %h1.sr-only Faces from the Past
   = gallery("staff")
+
+%section#cuttings
+  .container
+    .row
+      .col-sm-offset-3.col-sm-6.text-center
+        %h1.sr-only Press Cuttings
+        %p These press cuttings are a reminder of the problems that had to be overcome in setting up the first dialysis service in the West Midlands.
+      .col-sm-12
+        = gallery("cuttings")
