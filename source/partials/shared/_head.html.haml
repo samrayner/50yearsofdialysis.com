@@ -8,4 +8,11 @@
     = "#{current_page.data.title} -" if current_page.data.title
     = data.site.title
 
+  /[if lt IE 9]
+    = javascript_include_tag "//html5shiv.googlecode.com/svn/trunk/html5.js"
+    = javascript_include_tag "ie"
+
   = stylesheet_link_tag "application"
+
+  /[if lt IE 9]
+    = stylesheet_link_tag "ie"
