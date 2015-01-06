@@ -1,15 +1,19 @@
 //= require_tree .
 //= require bootstrap
 
+class Viewport
+  @getWidth: ->
+    size = window
+            .getComputedStyle(document.body,':after')
+            .getPropertyValue('content')
+    size.replace(/\"/g, '')
+
 $ ->
-  $("[data-toggle=tooltip]").tooltip({ container: 'body' })
+  if Viewport.getWidth() == "wide"
+    #link images in the same gallery together
+    $(".gallery a").each ->
+      offset = $(this).parent().offset()
+      group = offset.top + offset.left
+      $(this).attr("data-fancybox-group", group)
 
-  $("a.fancybox").fancybox()
-
-  #link images in the same gallery together
-  $(".gallery a").each ->
-    offset = $(this).parent().offset()
-    group = offset.top + offset.left
-    $(this).attr("data-fancybox-group", group)
-
-  $("a[data-fancybox-group]").fancybox()
+    $("a[data-fancybox-group]").fancybox()
