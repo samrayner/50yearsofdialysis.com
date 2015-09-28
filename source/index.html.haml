@@ -13,50 +13,53 @@ slug: home
         In 1965, the first person in the West Midlands to have long-term dialysis for kidney failure started treatment at East Birmingham Hospital.
 
       :kramdown
-        The 50th anniversary of this life-changing event is worth celebrating!
+        We are celebrating the 50th anniversary of this life-changing event with a spectacular **Celebration Ball at Edgaston Stadium on 30th January 2016.**
 
-        We are gathering together stories, pictures and people linked to dialysis in East Birmingham over the last 50 years.
-
-        If you would like to have something displayed on this site, please [contact Dr Hugh Rayner](mailto:#{data.site.email}).
     .col-sm-6
       :kramdown
-        We have produced some anniversary badges. These are on sale at the cost price of **£3.50**. Please [contact Dr Hugh Rayner](mailto:#{data.site.email}) if you would like to buy one.
+        This will be an evening of spectacular entertainment, featuring students from Birmingham's Performing Arts Academy, [The BOA](http://www.boa-academy.co.uk), and special guest star **Sir Elton!**
 
-      = image_tag("shirt-badge.jpg", alt: "Anniversary badge", class: "img-responsive")
+        We do hope you will join the celebration.
 
-%section#party
+      %p
+        /= link_to "Buy Tickets", "http://dialysisball.eveyevents.com", class: "btn btn-primary btn-block btn-lg"
+        = link_to "Tickets Available Soon", "#", class: "btn btn-default btn-block btn-lg disabled"
+
+      %p.text-center
+        %small.text-muted £35 for staff & patients, £50 for consultants
+
+%section#entertainment
+  %h1.sr-only Our Entertainment: Sir Elton and The BOA
+  = gallery("entertainment")
+
+%section#dark
   .container
     .row
       .col-sm-12
         .alert.alert-success.alert-dismissible#thanks
           %button.close{ data: { dismiss: "alert" } } &times;
           Thanks for signing up. We'll send you an email when tickets go on sale.
-      .col-sm-12
+      .col-sm-6
         :kramdown
-          #Let's Celebrate!
+          We have produced some anniversary badges. These are on sale at the cost price of **£3.50**. Please [contact Dr Hugh Rayner](mailto:#{data.site.email}) if you would like to buy one.
 
-          The Dialysis 50th Anniversary Ball will be held at<br>**Edgbaston Stadium on Saturday 30th January, 2016**.
+          You can also subscribe to the mailing list for the latest on plans for the celebration.
 
-          It will be a spectacular event that people will talk about for the next 50 years!
-
-          _Enter your email address below to be notified when tickets go on sale._
-      .col-sm-offset-3.col-sm-6
         = form_tag "//formspree.io/#{data.site.email}", method: :post do
           .row.gutters-xs
             = hidden_field_tag "_next", value: "http://www.50yearsofdialysis.com/#thanks"
             = hidden_field_tag "_subject", value: "50th Anniversary Sign-up"
-            .form-group.col-xs-8
-              = label_tag :email, class: "sr-only"
-              = email_field_tag :email, required: true, class: "form-control", id: :email, placeholder: "Your email address"
-            .form-group#gotcha
-              = label_tag :ignore, caption: "Please leave blank"
-              = text_field_tag :_gotcha, id: :ignore
+            .col-xs-8
+              .form-group
+                = label_tag :email, class: "sr-only"
+                = email_field_tag :email, required: true, class: "form-control", id: :email, placeholder: "Your email address"
+              .form-group#gotcha
+                = label_tag :ignore, caption: "Please leave blank"
+                = text_field_tag :_gotcha, id: :ignore
             .col-xs-4
-              = submit_tag "Notify me", class: "btn btn-default btn-block"
-
-      .col-sm-12
-        :kramdown
-          If you would like to join the planning team, please [contact Dr Hugh Rayner](mailto:#{data.site.email}).
+              = submit_tag "Subscribe", class: "btn btn-default btn-block"
+      .col-sm-6
+        = image_tag("shirt-badge.jpg", alt: "Anniversary badge", class: "img-responsive")
 
 %section#staff
   %h1.sr-only Faces from the Past

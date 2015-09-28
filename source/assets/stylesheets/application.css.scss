@@ -72,6 +72,8 @@ form #gotcha {
 -------------------------------------------------- */
 
 .btn {
+  text-decoration: none;
+
   &:active {
     box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
   }
@@ -167,12 +169,18 @@ header {
   font-size: 1.4em;
 }
 
-/* Party
+/* Entertainment
 ================================================== */
 
-#party {
+#entertainment .gallery img {
+  @include responsive(width, 16.66666%, 16.66666%, 16.66666%, 33.3333%);
+}
+
+/* Dark
+================================================== */
+
+#dark {
   background-color: $pale-blue;
-  text-align: center;
 }
 
 /* Staff
