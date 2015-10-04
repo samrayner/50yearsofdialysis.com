@@ -3,8 +3,10 @@ slug: home
 ---
 
 %header
-  = image_tag("crest.png", alt: "Heartlands Crest", class: "crest")
-  %h1 50 Years of Dialysis
+  .container
+    .inner
+      = image_tag("crest.png", alt: "Heartlands Crest", class: "crest")
+      %h1 50 Years of Dialysis
 
 .container
   .row
@@ -12,27 +14,33 @@ slug: home
       %p.intro
         In 1965, the first person in the West Midlands to have long-term dialysis for kidney failure started treatment at East Birmingham Hospital.
 
-      :kramdown
-        We are celebrating the 50th anniversary of this life-changing event with a spectacular **Celebration Ball at Edgaston Stadium on 30th January 2016.**
-
     .col-sm-6
       :kramdown
-        This will be an evening of spectacular entertainment, featuring students from Birmingham's Performing Arts Academy, [The BOA](http://www.boa-academy.co.uk), and special guest star **Sir Elton!**
+        We are celebrating the 50th anniversary of this life-changing event with a Celebration Ball. It will be an evening of spectacular entertainment, featuring students from Birmingham's Performing Arts Academy, [The BOA](http://www.boa-academy.co.uk), and special guest star **Sir Elton!** We do hope you will join the celebration.
 
-        We do hope you will join the celebration.
+%section#invitation
+  .container
+    .row
+      .col-sm-12.text-center
+        %h2 30th January 2016, 7–11.45pm
+        %h3 Edgbaston Cricket Stadium, Birmingham, B5 7QU
 
-      %p
-        /= link_to "Buy Tickets", "http://dialysisball.eveyevents.com", class: "btn btn-primary btn-block btn-lg"
-        = link_to "Tickets Available Soon", "#", class: "btn btn-default btn-block btn-lg disabled"
+        %p
+          %strong Buy tickets now:
+          Call Janet Gray and Marie Lloyd on
+          %strong 0121 424 2112
 
-      %p.text-center
-        %small.text-muted £35 for staff & patients, £50 for consultants
+        %p
+          %small.text-muted
+            Tickets are £35 for patients, staff and guests, £50 for consultants and generous friends. Admission is by ticket only. Prices include a
+            = link_to "three course banquet.", "menu.pdf"
+            Please state any dietary requirements when you ring.
 
 %section#entertainment
   %h1.sr-only Our Entertainment: Sir Elton and The BOA
   = gallery("entertainment")
 
-%section#dark
+%section
   .container
     .row
       .col-sm-12

@@ -29,9 +29,15 @@ blockquote {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.4em;
-  font-size: $font-size-base * 3;
+h2 {
+  margin: 0.1em 0 0;
+  font-size: 3em;
+}
+
+h3 {
+  margin: 0.1em 0 1em;
+  font-size: 2em;
+  color: $gold;
 }
 
 p {
@@ -113,21 +119,11 @@ form #gotcha {
 
 header {
   position: relative;
-  background: #ccc url(../images/photos/truck.jpg) no-repeat 50% 35%;
+  background: #000 url(../images/photos/elton.jpg) no-repeat 50% 50%;
   background-size: cover;
-  padding: 50px 0;
-  text-align: center;
 
-  &::after {
-    display: block;
-    content: " ";
-    background-color: black;
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .container {
+    height: 300px;
   }
 
   > * {
@@ -135,17 +131,26 @@ header {
     z-index: 2;
   }
 
+  .inner {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+
   h1 {
+    margin: 0;
+    display: inline-block;
     line-height: 1;
-    margin: 10px  0;
     color: white;
     text-shadow: 0 1px 1px black;
-    @include responsive(font-size, 4em, 3.5em, 2.5em, 2em);
+    @include responsive(font-size, 3em, 3em, 2.5em, 2em);
+    position: relative;
+    top: 0.2em;
   }
 
   .crest {
-    display: inline-block;
-    @include responsive(width, 10%, 15%, 20%, 25%);
+    margin-right: 0.5em;
+    @include responsive(width, 80px, 80px, 60px, 60px);
   }
 }
 
@@ -176,11 +181,13 @@ header {
   @include responsive(width, 16.66666%, 16.66666%, 16.66666%, 33.3333%);
 }
 
-/* Dark
+/* Invitation
 ================================================== */
 
-#dark {
-  background-color: $pale-blue;
+#invitation {
+  margin-top: -1em;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  //background-color: $pale-blue;
 }
 
 /* Staff
