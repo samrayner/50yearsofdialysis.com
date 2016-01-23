@@ -69,6 +69,23 @@ slug: home
       .col-sm-6
         = image_tag("shirt-badge.jpg", alt: "Anniversary badge", class: "img-responsive")
 
+%section
+  .container
+    .row
+      .col-sm-6
+        = link_to 'http://www.bbc.co.uk/archive/tomorrowsworld/8001.shtml' do
+          = image_tag("tomorrows-world.jpg", alt: "Tomorrow's World", class: "img-responsive")
+      .col-sm-6
+        :kramdown
+          ### The Inaugural 'Tomorrow's World'
+
+          [The first episode of The BBC's 'Tomorrow's World'][tw] was broadcast 7th July 1965 on BBC 1.
+
+          Derek Cooper, with help from consultant physician Dr Charles Fletcher, investigates new advances in kidney dialysis machines designed to work in the home and follows the range of opinions about this development.
+
+          [tw]: http://www.bbc.co.uk/archive/tomorrowsworld/8001.shtml
+
+
 %section#staff
   %h1.sr-only Faces from the Past
   = gallery("staff")
