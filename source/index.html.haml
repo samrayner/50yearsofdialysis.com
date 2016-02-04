@@ -11,34 +11,29 @@ slug: home
 .container
   .row
     .col-sm-6
-      %p.intro
-        In 1965, the first person in the West Midlands to have long-term dialysis for kidney failure started treatment at East Birmingham Hospital.
-
+      .intro
+        :kramdown
+          In 1965, the first person in the West Midlands to have long-term dialysis for kidney failure started treatment at East Birmingham Hospital. Here is a short documentary on the years since.
     .col-sm-6
-      :kramdown
-        We are celebrating the 50th anniversary of this life-changing event with a Celebration Ball. It will be an evening of spectacular entertainment, featuring students from Birmingham's Performing Arts Academy, [The BOA](http://www.boa-academy.co.uk), and special guest star **Sir Elton!** We do hope you will join the celebration.
-
-%section#invitation
-  .container
-    .row
-      .col-sm-12.text-center
-        %h2 30th January 2016, 7pm–1am
-        %h3 Edgbaston Cricket Stadium, Birmingham, B5 7QU
-
-        %p
-          %strong Buy tickets now:
-          Call Janet Gray and Marie Lloyd on
-          %strong 0121 424 2112
-
-        %p
-          %small.text-muted
-            Tickets are £35 for patients, staff and guests, £50 for consultants and generous friends. Admission is by ticket only. Prices include a
-            = link_to "three course banquet.", "menu.pdf"
-            Please state any dietary requirements when you ring.
+      = link_to 'https://vimeo.com/nhsmediahub/review/153505571/a67a73877e' do
+        = image_tag("documentary.jpg", alt: "50 Years of Dialysis Video", class: "img-responsive")
 
 %section#entertainment
   %h1.sr-only Our Entertainment: Sir Elton and The BOA
   = gallery("entertainment")
+
+%section
+  .container
+    .row
+      .col-sm-6.col-sm-push-6
+        :kramdown
+          [View 4 free chapters][chaps] of the recently published [Understanding Kidney Diseases][book] by Drs Hugh Rayner, Mark Thomas and David Milford.
+
+          [book]: http://www.springer.com/gp/book/9783319234571
+          [chaps]: http://www.theisn.org/education/education-topics/general-nephrology/item/2420-free-book-chapters-understanding-kidney-diseases
+      .col-sm-6.col-sm-pull-6
+        = link_to image_path('book.png'), 'data-fancybox-group' => '0' do
+          = image_tag("book.png", alt: "Tomorrow's World", class: "img-responsive")
 
 %section
   .container
@@ -50,50 +45,34 @@ slug: home
       .col-sm-6
         :kramdown
           We have produced some anniversary badges. These are on sale at the cost price of **£3.50**. Please [contact Dr Hugh Rayner](mailto:#{data.site.email}) if you would like to buy one.
-
-          You can also subscribe to the mailing list for the latest on plans for the celebration.
-
-        = form_tag "//formspree.io/#{data.site.email}", method: :post do
-          .row.gutters-xs
-            = hidden_field_tag "_next", value: "http://www.50yearsofdialysis.com/#thanks"
-            = hidden_field_tag "_subject", value: "50th Anniversary Sign-up"
-            .col-xs-8
-              .form-group
-                = label_tag :email, class: "sr-only"
-                = email_field_tag :email, required: true, class: "form-control", id: :email, placeholder: "Your email address"
-              .form-group#gotcha
-                = label_tag :ignore, caption: "Please leave blank"
-                = text_field_tag :_gotcha, id: :ignore
-            .col-xs-4
-              = submit_tag "Subscribe", class: "btn btn-default btn-block"
       .col-sm-6
         = image_tag("shirt-badge.jpg", alt: "Anniversary badge", class: "img-responsive")
 
 %section
   .container
     .row
-      .col-sm-6
-        = link_to 'http://www.bbc.co.uk/archive/tomorrowsworld/8001.shtml' do
-          = image_tag("tomorrows-world.jpg", alt: "Tomorrow's World", class: "img-responsive")
-      .col-sm-6
+      .col-sm-6.col-sm-push-6
         :kramdown
           [The inaugural episode of The BBC's 'Tomorrow's World'][tw] was broadcast 7th July 1965 on BBC 1.
 
           Derek Cooper, with help from consultant physician Dr Charles Fletcher, investigates new advances in kidney dialysis machines designed to work in the home and follows the range of opinions about this development.
 
           [tw]: http://www.bbc.co.uk/archive/tomorrowsworld/8001.shtml
+      .col-sm-6.col-sm-pull-6
+        = link_to 'http://www.bbc.co.uk/archive/tomorrowsworld/8001.shtml' do
+          = image_tag("tomorrows-world.jpg", alt: "Tomorrow's World", class: "img-responsive")
 
 %section
   .container
     .row
       .col-sm-6
-        = link_to 'https://vimeo.com/nhsmediahub/review/135346169/58eac1c3cd' do
-          = image_tag("john-hawkins.jpg", alt: "Dr John Hawkins", class: "img-responsive")
-      .col-sm-6
         :kramdown
           [Recollections of early days on the East Birmingham dialysis unit][jh] by Dr John Hawkins.
-          
+
           [jh]: https://vimeo.com/nhsmediahub/review/135346169/58eac1c3cd
+      .col-sm-6
+        = link_to 'https://vimeo.com/nhsmediahub/review/135346169/58eac1c3cd' do
+          = image_tag("john-hawkins.jpg", alt: "Dr John Hawkins", class: "img-responsive")
 
 
 %section#staff
